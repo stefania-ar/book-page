@@ -23,7 +23,7 @@ class Route {
         if(count($partsRoute) != count($partsURL)){
             return false;
         }
-        foreach ($partsRoute as $key => $part) {
+        foreach ($partsRoute as $key => $part) { 
             if($part[0] != ":"){
                 if($part != $partsURL[$key])
                 return false;

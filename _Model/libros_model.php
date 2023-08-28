@@ -9,10 +9,10 @@ class libros_model{
     }
 
 
-    function insert($a, $b, $c, $f, $e, $g, $h, $i){
+    function insert($a, $b, $c, $f, $e, $g, $h, $i, $j){
         $this->$db;
         $sentencia=$this->db->prepare(" INSERT INTO libros(nombre, genero_principal, genero_sec, autor_ap, autor_nom, anio_publi, pais_origen,
-        anio_leido) VALUES (?,?,?,?,?,?,?,?)");
+        anio_leido, pais_set) VALUES (?,?,?,?,?,?,?,?,?)");
         if(null != ($_POST['nombreLibro'])){
             $sentencia-> execute(array($a, $b, $c, $f, $e, $g, $h, $i));
         }

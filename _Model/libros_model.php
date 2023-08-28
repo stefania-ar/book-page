@@ -5,16 +5,16 @@ class libros_model{
     private $db;
 
     function __construct(){
-        $this->db=new PDO('mysql:host=localhost;' .'dbname=general;charset=utf8' , 'root', '');
+        $this->db=new PDO('mysql:host=localhost;' .'dbname=libros;charset=utf8' , 'root', '');
     }
 
 
-    function insert($a, $b, $c, $f, $e, $g, $h){
+    function insert($a, $b, $c, $f, $e, $g, $h, $i){
         $this->$db;
-        $sentencia=$this->db->prepare(" INSERT INTO libros(nombre, genero_principal, genero_sec, autor_a, anio_publi, pais_origen,
-        anio_leido) VALUES (?,?,?,?,?,?,?)");
+        $sentencia=$this->db->prepare(" INSERT INTO libros(nombre, genero_principal, genero_sec, autor_ap, autor_nom, anio_publi, pais_origen,
+        anio_leido) VALUES (?,?,?,?,?,?,?,?)");
         if(null != ($_POST['nombreLibro'])){
-            $sentencia-> execute(array($a, $b, $c, $f, $e, $g, $h));
+            $sentencia-> execute(array($a, $b, $c, $f, $e, $g, $h, $i));
         }
         header("Location: ".BASE_URL."home");
     }

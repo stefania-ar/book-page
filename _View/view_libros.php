@@ -14,6 +14,10 @@ Class view_libros{
 
         $this->smarty->display('templates/showbooks.tpl');
     }
+
+    function showHome(){
+        $this->smarty->display('templates/home.tpl');
+    }
 }
     
     

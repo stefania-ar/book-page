@@ -41,6 +41,23 @@ Class ControllerLibros{
 
         
     }
+
+
+    function advancedSearch(){
+        $titulo = $_POST['nombreLibroB'];
+        $genero=$_POST['generoB'];
+        $generoSec=$_POST['generoSecB'];
+        $nombre = $_POST['nombreAutorB'];
+        $apellido = $_POST['apellidoAutorB'];
+        $anioPubli=$_POST['anioPubliB'];
+        $paisEsc= $_POST['paisEscritoB'];
+        $paisSeteado=$_POST['paisSeteadoB'];
+        $anioLeido=$_POST['anioLeidoB'];
+
+        $libros=$this->model->advancedSearch($titulo, $genero, $generoSec, $nombre, $apellido, $anioPubli
+        $paisEsc, $paisSeteado, $anioLeido );
+        $this->view->renderResults($libros);
+    }
 }
 
 
